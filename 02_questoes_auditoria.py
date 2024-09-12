@@ -1,7 +1,7 @@
 import csv
 
 # Nome do arquivo txt de entrada e do arquivo csv de saída
-arquivo_txt = '/home/bruno-souza/Downloads/arquivos-20240816T165010Z-001/arquivos/resultado_questao_auditoria.txt'
+arquivo_txt = '/home/bruno-souza/Área de trabalho/Ajuste-Colunas/arquivos/resultado_questao_auditoria.txt'
 arquivo_csv = '02_questoes_auditoria.csv'
 
 # Criar um conjunto para armazenar os números das linhas que contêm arquivos .pdf
