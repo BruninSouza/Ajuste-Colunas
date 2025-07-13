@@ -1,8 +1,8 @@
 import csv
 
 # Nome do arquivo txt de entrada e do arquivo csv de saída
-arquivo_txt = '/home/bruno-souza/Área de trabalho/Ajuste-Colunas/arquivos/resultado_evidencias.txt'
-arquivo_csv = '07_evidencias.csv'
+arquivo_txt = './arquivos/resultado_matriz_achados.txt'
+arquivo_csv = 'csv-gerados/01_matriz_achados.csv'
 
 # Criar um conjunto para armazenar os números das linhas que contêm arquivos .pdf
 linhas_com_pdf = set()
@@ -15,10 +15,11 @@ with open(arquivo_txt, 'r') as f:
             numero_linha = int(linha.split('.pdf:')[0])
             linhas_com_pdf.add(numero_linha)
 
-# Criar o arquivo CSV com 1636 linhas
+# Criar o arquivo CSV com 343 linhas
 with open(arquivo_csv, 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
-    for i in range(1, 1 + 1636):
+    writer.writerow(['Matriz de achados?'])  # Escrever o cabeçalho na primeira linha
+    for i in range(1, 1 + 343):
         # Escrever 1 se o número da linha estiver no conjunto, caso contrário 0
         writer.writerow([1 if i in linhas_com_pdf else 0])
 
